@@ -34,8 +34,8 @@ app.use('/login', express.static(path.resolve('views', 'login')));
 app.use('/contacts', express.static(path.resolve('views', 'contacts')));
 app.use('/signup', express.static(path.resolve('views', 'signup')));
 app.use('/styles', express.static(path.resolve('views', 'styles')));
-app.use('/verify/:id/:token', express.static(path.resolve('views', 'verify')))
-app.use('/img', express.static(path.resolve('img')))
+app.use('/verify/:id/:token', express.static(path.resolve('views', 'verify')));
+app.use('/img', express.static(path.resolve('img')));
 app.use('/components', express.static(path.resolve('views', 'components')));
 
 // Backend routers
