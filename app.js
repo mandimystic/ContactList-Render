@@ -11,7 +11,7 @@ const cookieParser = require ('cookie-parser');
 const cors = require ('cors');
 const morgan = require ('morgan');
 const { userExtractor } = require('./middleware/auth');
-const { MONGO_URI } = require("./config");
+const { MONGO_URI } = require("./config").default;
 
 
 (async () => {
