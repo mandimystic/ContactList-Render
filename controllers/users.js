@@ -18,6 +18,7 @@ const userExist = await User.findOne({email})
 if (userExist) {
     return response.status(400).json({ error: 'User already exists' });
 }
+
 const saltRounds = 10
 
 const passwordHash = await bcrypt.hash(password, saltRounds);

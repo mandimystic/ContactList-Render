@@ -57,7 +57,7 @@ contactsRouter.patch('/:id', async (request, response) => {
   const {name,phone} = request.body;
 
   if (!name_regexr.test(name) || !phone_regexr.test(phone)){
-    return response.status(400).json({error:"To edit and save you should follow the requirements"})
+    return response.status(400).json({error:"To edit and save it you should follow the requirements"})
   };
 
   await Contact.findByIdAndUpdate(request.params.id, { name,phone })
