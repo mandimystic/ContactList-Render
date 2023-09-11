@@ -49,9 +49,9 @@ const transporter = nodemailer.createTransport({
 await transporter.sendMail({
     from: process.env.EMAIL_USER,// sender address
     to: savedUser.email, // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: `<a href="${PAGE_URL}/verify/${savedUser.id}/${token}">Verificar correo</a>`, // html body
+    subject: "APP-ContactList Verify your mail", // Subject line
+    text: "Hello! please verify your e mail to continue adding contacts", // plain text body
+    html: `<a href="${PAGE_URL}/verify/${savedUser.id}/${token}">Verify e mail</a>`, // html body
   });
 
 return response.status(201).json('User created, please confirm your email');
